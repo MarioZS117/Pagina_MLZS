@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>GaussSeidel</title>
+</head>
+<body>
+    <section class="header">
+        <header>
+            <img src="img/Tatsumaki.png" class="log">
+            <h2 class="Titulo">Método de Gauss-Seidel</h2>
+            <p id="dat">Web Master: <br>
+                        LissandroZS
+            </p>
+            <div class="redes">
+                <a href="https://www.facebook.com/MarioLissZS"><img src="img/facebook.png" id="facebook"></a>
+                <a href="https://instagram.com/mariolissandro?igshid=MXBzdWRoam1xbjdrbw=="><img src="img/instagran.png" id="instagram"></a>
+            </div>
+        </header>
+    </section>
+
+    <div class="definicion">
+        <h2 class="subtema">¿Qué es el método de Gauss-Seidel?</h2>
+        <p class="def"> El método de <b>Gauss-Seidel</b> es un algoritmo iterativo utilizado para resolver <br>
+                                sistemas de ecuaciones lineales. Se utiliza principalmente cuando se tiene  <br>
+                                un sistema grande de ecuaciones lineales y se busca encontrar las soluciones<br>
+                                de manera numérica.
+        </p>
+        <p class="def">Este método funciona para ecuaciones que obedezcan la forma que aparece en la siguiente <br>
+                       imagen, esta misma representa una matriz de ecuaciones, en donde: <br>
+                        <ul class="lisdef">
+                            <li>a: Coeficiente de la variable.</li>
+                            <li>Subindice <sub>nm</sub>: Posición del coeficiente.</li>
+                            <li>b<sub>n</sub>: Respresenta los lados derechos.</li>
+                        </ul></p>
+        <img src="img/forma-removebg-preview.png" class="mat">
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr class="div">
+    <div class="ejemplo">
+        <h2 class="subtema">Ejemplo en Excel</h2>
+        <p class="def">A usos prácticos haremos uso de la herramienta Excel para demostrar <br>
+                        el proceso a seguir en este método. <br>
+                        A continuación resolveremos el sistema de ecuaciones: <br>
+                        2x + 8y -z = 11 <br>
+                        -x + y -4z = 3  <br>
+                        5x -y + z = 10  <br>
+                        Toleracia: 0.001 </p>
+                        <br> <br>
+        <h2 class="subtema1">Hallar Matríz de Coeficientes</h2>
+                        <p class="def">Lo primero es identificar nuestra 
+                        <a href="https://gaz.wiki/wiki/es/Coefficient_matrix#:~:text=En%20%C3%A1lgebra%20lineal%2C%20una%20matriz%20de%20coeficientes%20es,se%20utiliza%20para%20resolver%20sistemas%20de%20ecuaciones%20lineales.">matriz de coeficientes</a> 
+                        y <a href="https://www.geometriaanalitica.info/vectores-linealmente-independientes-y-dependientes-independencia-dependencia-lineal/">vector <br>
+                        de terminos independientes.</a></p>
+                        <img src="img/Matriz_coef-removebg-preview.png" class="mat">
+                        <br>
+                        <br>
+        <h2 class="subtema1">Hallar Matríz Ideal</h2>
+        <p class="def">Para este caso tenemos que nuestra matriz de coeficientes no cumple <br>
+                        el parámetro de que los números de la diagonal principal sean mayores <br>
+                        que la suma de los valores adyacentes, por ende tenemos que hacer un <br>
+                        ajuste en los renglones para que podamos continuar con el método. <br>
+                        <br>
+                        Nota: al hacer los ajustes para un renglon se deben mover también <br>
+                        sus lados derechos.</p>
+                        <img src="img/Matriz_ideal-removebg-preview.png" class="matide">
+                        <br>
+                        <br>
+        <h2 class="subtema1">Despejar las variables</h2>
+        <p class="def">Hecho el ajuste anterior, tenemos que despejar las ecuaciones en <br>
+                        en función de las variables, es decir, trataremos de hacer una <br>
+                        función en la que se calcule el valor de la variable tal y como <br>
+                        se muestra en la siguiente imagen.</p>
+                        <img src="img/Despejes-removebg-preview (1).png" class="matdes">
+                        <br>
+                        <br>
+                        <br>
+        <h2 class="subtema1">Iteraciones</h2>
+        <p class="def">Para la iteración 0 se establecen valores de 0, seguidamente <br>
+                        en la iteración 1 se utilizan las funciones antes obtenidas <br>
+                        para obtener los nuevos valores de x,y,z en las distintas funciones. <br>
+                        Teniendo estos nuevos valores e itera de acuerdo al valor de norma <br>
+                        obtenido y a la tolerancia de fallo que tengamos permitida.
+                        </p>
+                        <img src="img/norma_-removebg-preview.png" class="matnor">
+                        <br>
+                        <br>
+        <h2 class="subtema1">Conclusiones</h2>
+        <p class="def">El valor de las incognitas es: <br>
+                        <ul class="lisejemplo">
+                            <li>x = -1</li>
+                            <li>y = 3</li>
+                            <li>z = 5</li>
+                            <li>Valor de norma: 0.000208558979567089</li>
+                            <li>Iteración: 6</li>
+                        </ul>
+        </p>
+    </div>
+</body>
+</html>
